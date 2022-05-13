@@ -12,3 +12,19 @@ config interface 'lan'
 	option delegate '0'
 	option device 'eth0'
 
+config interface 'wan0'
+	option proto 'dhcp'
+	option device 'usb0'
+
+config interface 'wan1'
+	option proto 'dhcp'
+	option device 'usb1'
+
+config interface 'wan2'
+	option proto 'dhcp'
+	option device 'usb2'
+
+config interface 'wan3'
+	option proto 'dhcp'
+	option device 'usb3'
+	
