@@ -1,6 +1,6 @@
 config modems 'ports'
-	option modem1 '/dev/ttyUSB1'
- 	option modem2 '/dev/ttyUSB5'
- 	option modem3 '/dev/ttyUSB7'
- 	option modem4 '/dev/ttyUSB10'
+	option modem1 '1-1.3'
+ 	option modem2 '1-1.4'
+ 	option modem3 '3-1.2'
+ 	option modem4 '3-1.3'
  	

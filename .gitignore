@@ -30,3 +30,4 @@ git-src
 .cproject
 .ccache
 .vscode
+/target/linux/sunxi/base-files/root/.ssh
