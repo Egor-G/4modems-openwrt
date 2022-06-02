@@ -70,6 +70,8 @@ if [ -z "$CONNECTED" ]; then
 	echo "Modem $2 : CONNECTING"
 	echo -e "AT^NDISDUP=1,1,\"internet\"\r" | microcom -t 1000 /dev/$PORT
 	CONNECTED="connected"
+	tc qdisc add dev $INTERFACE root handle 1: htb
+	tc class add dev $INTERFACE parent 1: classid 1:1 htb rate 10Mbit
 	continue
 else
 	if echo -e "AT^NDISSTATQRY?\r" | microcom -t 1000 /dev/$PORT | grep "NDISSTATQRY: 0,"; then
